@@ -1,0 +1,17 @@
+package com.exe201.backend.api.book.cancel_booking;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class CancelBookingRequest {
+    private String reason;
+
+    public boolean isValid() {
+        return reason != null
+                && !reason.trim().isEmpty();
+    }
+}
